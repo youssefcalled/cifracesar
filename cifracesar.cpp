@@ -35,5 +35,7 @@ int main(){
 
      for(i = 0; i < strlen(palavra); i++)
         printf("%c",decifra[i]);
+    
+    return 0;
 
 }

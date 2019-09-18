@@ -5,9 +5,10 @@
 int main(){
 
     char decifra[100];
-    char palavra[100] = "xqlyhuvlgdgh kdfnhu";
+    char palavra[100] = "XQLYHUVLGDGH kdfnhu";
     int i;
 
+    strlwr(palavra);
 
      for(i = 0; i < strlen(palavra); i++){
 
@@ -15,16 +16,8 @@ int main(){
             continue;
         }
 
-        else if(palavra[i] == 97){
-            decifra[i] = 120;
-        }
-
-        else if(palavra[i] == 98){
-            decifra[i] = 121;
-        }
-
-        else if(palavra[i] == 99){
-            decifra[i] = 122;
+        else if(palavra[i] < 100){
+            decifra[i] = (palavra[i] + 26) - 3 ;
         }
 
         else{
@@ -35,7 +28,6 @@ int main(){
 
      for(i = 0; i < strlen(palavra); i++)
         printf("%c",decifra[i]);
-    
-    return 0;
 
+    return 0;
 }
